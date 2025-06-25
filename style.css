@@ -1,0 +1,135 @@
+
+
+ * {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+
+header,
+footer {
+    background-color: #3392f1;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+
+
+header p {
+    margin: 5px 0 0 0;
+    color: #bdc3c7;
+}
+
+
+
+main {
+    max-width: 900px;
+   margin: 40px auto;
+   padding: 0 20px;
+}
+
+
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+section h2 {
+    color: #2980b9;
+    margin-top: 0;
+}
+
+
+#a-propos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+#a-propos img {
+    border-radius: 50%;
+}
+
+
+.cartes-projets-conteneur {
+    display: flex;
+    justify-content: space-between; /* Espace les cartes uniformément */
+    gap: 20px; /* Espace entre les cartes */
+ }
+
+ /* Le sélecteur .carte cible tous les éléments avec la classe "carte" */
+.carte {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 20px;
+     border-radius: 6px;
+    width: 32%; /* Environ un tiers de la largeur pour chaque carte */
+ }
+
+.carte h3 {
+     margin-top: 0;
+}
+
+
+.carte:hover {
+    transform: translateY(-5px); /* Fait "monter" la carte de 5 pixels */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Une ombre plus prononcée */
+ }
+
+
+ .carte {
+/* ... tous les styles précédents de .carte ... */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+
+ @media (max-width: 768px) {
+
+ }
+
+
+ @media (max-width: 768px) {
+ /* Les règles à l'intérieur de ces accolades
+3 ne s'appliqueront QUE si la largeur de l'écran
+4 est de 768 pixels OU MOINS. */
+
+ /* Pour la section "À propos" */
+#a-propos {
+    flex-direction: column; /* On change l'axe de Flexbox ! Au lieu de s'aligner
+en ligne, les éléments s'empilent en colonne. */
+     text-align: center; /* On centre le texte maintenant que l'image est audessus. */
+}
+
+ /* Pour la section des projets */
+.cartes-projets-conteneur {
+    flex-direction: column; /* On fait la même chose pour le conteneur des
+cartes. */
+    align-items: center; /* On centre les cartes horizontalement. */
+}
+
+.carte {
+    width: 90%; /* Au lieu de 32%, chaque carte prend maintenant 90% de la
+largeur disponible. */
+    margin-bottom: 20px; /* On ajoute une marge en bas car 'gap' ne s'applique
+plus de la même manière. */
+    }
+ }
